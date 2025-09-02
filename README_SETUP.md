@@ -29,10 +29,11 @@ This guide installs **Orpheus-CPP**, the **FastRTC demo**, and **llama-cpp-pytho
 
 ### 1) Project folder & Python 3.11 venv
 
-Open **PowerShell** and go to your project (adjust the path to your folder if needed):
+Open **PowerShell** and clone the repo and go to project (adjust the path to your folder if needed):
 
 ```powershell
-cd C:\Users\LETEB\alignerr\code_rl\orpheus-cpp
+git clone git@github.com:letebrhan/orpheus-cpp.git
+cd orpheus-cpp
 ```
 
 Create & activate a **Python 3.11** venv:
@@ -96,7 +97,7 @@ Fastest fix: use Python **3.11** (above). If it still compiles:
   winget install Kitware.CMake
   ```
 - Install **Visual Studio Build Tools** (no full IDE required). In the installer, select the workload:
-  - ✅ **Desktop development with C++**
+  - **Desktop development with C++**
   - Ensure these components are selected: **MSVC v143**, **Windows 11 SDK**, **C++ CMake tools for Windows**.
 - Open **x64 Native Tools Command Prompt for VS 2022** and run:
   ```cmd
@@ -134,7 +135,8 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 sudo apt update
 sudo apt install -y python3.11 python3.11-venv python3-pip
 
-cd ~/alignerr/code_rl/orpheus-cpp
+git clone git@github.com:letebrhan/orpheus-cpp.git
+cd orpheus-cpp
 python3.11 -m venv venv311
 source venv311/bin/activate
 python -m pip install --upgrade pip wheel setuptools
